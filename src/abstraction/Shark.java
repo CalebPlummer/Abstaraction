@@ -10,28 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Shark extends Fish implements ISwim, IMakeSound{
-    boolean isSaltWater = true;
-    String name;
 
-    public Shark(String name) {
-        this.name = name;
-    }
-
-    @Override
-    String getWaterType() {
-        if(isSaltWater)
-        {
-            return "salt water";
-        }
-        else
-        {
-            return "fresh water";
-        }
-    }
-
-    @Override
-    String getName() {
-        return name;
+    public Shark(String name, boolean isSaltWater) {
+        super(name, isSaltWater);
     }
 
     @Override

@@ -11,6 +11,19 @@ package abstraction;
  */
 public abstract class Bird extends Animal{
     public int Wingspan;
-    abstract int getWingspan();
 
+    public Bird(String name, int Wingspan) {
+        super(name);
+        this.Wingspan = Wingspan;
+    }
+    
+    public int getWingspan()
+    {
+        return Wingspan;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

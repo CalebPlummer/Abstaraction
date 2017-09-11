@@ -10,20 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Penguin extends Bird implements IWalk, ISwim, IMakeSound{
-    
-    private String name;
-    private int Wingspan = 30;
 
-    public Penguin(String name) {
-        this.name = name;
-    }
-
-    int getWingspan() {
-        return Wingspan;
-    }
-
-    String getName() {
-        return name;
+    public Penguin(String name, int Wingspan) {
+        super(name, Wingspan);
     }
 
     @Override

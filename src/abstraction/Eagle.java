@@ -10,11 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Eagle extends Bird implements IFly, ISwim, IWalk, IMakeSound{
-    private String name;
-    private int Wingspan = 89;
 
-    public Eagle(String name) {
-        this.name = name;
+    public Eagle(String name, int Wingspan) {
+        super(name, Wingspan);
     }
 
     @Override
@@ -35,14 +33,6 @@ public class Eagle extends Bird implements IFly, ISwim, IWalk, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println(name + " makes a screech");
-    }
-    
-    String getName() {
-        return name;
-    }
-    
-    int getWingspan() {
-        return Wingspan;
     }
     
 }

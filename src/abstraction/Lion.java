@@ -10,16 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Lion extends Mammal implements IWalk, ISwim, IMakeSound{
-    String name;
-    double bodyTemp = 100.5;
 
-    public Lion(String name) {
-        this.name = name;
-    }
-
-    @Override
-    double getBodyTemp() {
-        return bodyTemp;
+    public Lion(String name, double bodyTemp) {
+        super(name, bodyTemp);
     }
 
     @Override
@@ -36,10 +29,4 @@ public class Lion extends Mammal implements IWalk, ISwim, IMakeSound{
     public void makeSound() {
         System.out.println(name + " growls.");
     }
-
-    @Override
-    String getName() {
-        return name;
-    }
-    
 }

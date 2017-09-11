@@ -10,16 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Dolphin extends Mammal implements ISwim, IMakeSound{
-    double bodyTemp = 96.8;
-    String name;
 
-    public Dolphin(String name) {
-        this.name = name;
-    }
-
-    @Override
-    double getBodyTemp() {
-        return bodyTemp;
+    public Dolphin(String name, double bodyTemp) {
+        super(name, bodyTemp);
     }
 
     @Override
@@ -30,10 +23,5 @@ public class Dolphin extends Mammal implements ISwim, IMakeSound{
     @Override
     public void makeSound() {
         System.out.println(name + " makes a cooing sound.");
-    }
-
-    @Override
-    String getName() {
-        return name;
     }
 }

@@ -10,6 +10,21 @@ package abstraction;
  * @author cplummer
  */
 public abstract class Animal {
-    String name;
-    abstract String getName();
+    public String name;
+    public Animal(String name)
+    {
+        this.name = name;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
+    
+    
 }

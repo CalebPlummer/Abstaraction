@@ -11,5 +11,19 @@ package abstraction;
  */
 public abstract class Mammal extends Animal{
     double bodyTemp;
-    abstract double getBodyTemp();
+    public Mammal(String name, double bodyTemp)
+    {
+        super(name);
+        this.bodyTemp = bodyTemp;
+    }
+    
+    public double getBodyTemp()
+    {
+        return bodyTemp;
+    }
+    
+    @Override
+    public String toString() {
+        return name;
+    }
 }

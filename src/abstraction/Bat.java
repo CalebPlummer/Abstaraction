@@ -10,18 +10,10 @@ package abstraction;
  * @author cplummer
  */
 public class Bat extends Mammal implements IFly, IWalk, ISwim, IMakeSound{
-    String name;
-    double bodyTemp = 111;
 
-    public Bat(String name) {
-        this.name = name;
+    public Bat(String name, double bodyTemp) {
+        super(name, bodyTemp);
     }
-
-    @Override
-    double getBodyTemp() {
-        return bodyTemp;
-    }
-
     @Override
     public void fly() {
         System.out.println(name + " begins to fly.");
@@ -41,12 +33,5 @@ public class Bat extends Mammal implements IFly, IWalk, ISwim, IMakeSound{
     public void makeSound() {
         System.out.println(name + " makes a high pitched screech.");
     }
-    
-    @Override
-    public String getName()
-    {
-        return name;
-    }
-    
     
 }

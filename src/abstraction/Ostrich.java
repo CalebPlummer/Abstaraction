@@ -11,21 +11,9 @@ package abstraction;
  */
 public class Ostrich extends Bird implements IWalk, ISwim, IMakeSound{
 
-    String name;
-    int Wingspan = 79;
 
-    public Ostrich(String name) {
-        this.name = name;
-    }
-    
-    @Override
-    String getName() {
-        return name;
-    }
-
-    @Override
-    int getWingspan() {
-        return Wingspan;
+    public Ostrich(String name, int Wingspan) {
+        super(name, Wingspan);
     }
 
     @Override

@@ -11,5 +11,25 @@ package abstraction;
  */
 public abstract class Fish extends Animal{
     boolean isSaltWater;
-    abstract String getWaterType();
+
+    public Fish(String name, boolean isSaltWater) {
+        super(name);
+        this.isSaltWater = isSaltWater;
+    }
+    
+    public String getWaterType() {
+         if(isSaltWater)
+        {
+            return "salt water";
+        }
+        else
+        {
+            return "fresh water";
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -10,29 +10,10 @@ package abstraction;
  * @author cplummer
  */
 public class Flying_Fish extends Fish implements IFly, ISwim, IMakeSound{
-    boolean isSaltWater = true;
-    String name;
     
-    public Flying_Fish(String name)
+    public Flying_Fish(String name, boolean isSaltWater)
     {
-        this.name = name;
-    }
-
-    @Override
-    String getWaterType() {
-        if(isSaltWater)
-        {
-            return "salt water";
-        }
-        else
-        {
-            return "fresh water";
-        }
-    }
-
-    @Override
-    String getName() {
-        return name;
+        super(name, isSaltWater);
     }
 
     @Override

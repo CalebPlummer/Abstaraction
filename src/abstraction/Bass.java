@@ -10,29 +10,9 @@ package abstraction;
  * @author cplummer
  */
 public class Bass extends Fish implements ISwim, IMakeSound{
-    boolean isSaltWater;
-    String name;
 
     public Bass(String name, boolean isSaltWater) {
-        this.name = name;
-        this.isSaltWater = isSaltWater;
-    }
-
-    @Override
-    String getWaterType() {
-         if(isSaltWater)
-        {
-            return "salt water";
-        }
-        else
-        {
-            return "fresh water";
-        }
-    }
-
-    @Override
-    String getName() {
-        return name;
+        super(name, isSaltWater);
     }
 
     @Override
@@ -42,7 +22,7 @@ public class Bass extends Fish implements ISwim, IMakeSound{
 
     @Override
     public void makeSound() {
-        System.out.println(name = " splashes in the water.");
+        System.out.println(name + " splashes in the water.");
     }
-    
+
 }
